@@ -52,19 +52,37 @@
     <Compile Include="Ajutor.Designer.cs">
       <DependentUpon>Ajutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="fereastraOptiuni.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="fereastraOptiuni.Designer.cs">
+      <DependentUpon>fereastraOptiuni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="meniuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="meniuPrincipal.Designer.cs">
+      <DependentUpon>meniuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="templateMeniuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="templateMeniuPrincipal.Designer.cs">
+      <DependentUpon>templateMeniuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ajutor.resx">
       <DependentUpon>Ajutor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="fereastraOptiuni.resx">
+      <DependentUpon>fereastraOptiuni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="meniuPrincipal.resx">
+      <DependentUpon>meniuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templateMeniuPrincipal.resx">
+      <DependentUpon>templateMeniuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

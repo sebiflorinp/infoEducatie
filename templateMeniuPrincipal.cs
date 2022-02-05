@@ -10,36 +10,26 @@ using System.Windows.Forms;
 
 namespace infoEducatie
 {
-    public partial class Form1 : Form
+    public partial class templateMeniuPrincipal : Form
     {
-        public Form1()
+        public templateMeniuPrincipal()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Iesire_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void butonX_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void butonMaximizare_Click(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-                WindowState = FormWindowState.Normal;
+            WindowState = FormWindowState.Maximized;
+            butonAjutor.Visible = false;
+            butonMaximizare.Visible = false;
+            butonX.Visible = false;
+            butonMinimizare.Visible = false;
+            baraDrag.Visible = false;
         }
 
         private void butonMinimizare_Click(object sender, EventArgs e)
@@ -47,25 +37,23 @@ namespace infoEducatie
             WindowState = FormWindowState.Minimized;
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Escape)   
-                this.Close();
-        }
-
         private void butonAjutor_Click(object sender, EventArgs e)
         {
             Ajutor meniuAjutor = new Ajutor();
             meniuAjutor.Show();
             meniuAjutor.Focus();
-            
             butonAjutor.Click-=butonAjutor_Click;
         }
-
-        private void butonOptiuni_Click(object sender, EventArgs e)
+        protected void verificareMaximizareFereastraNoua(templateMeniuPrincipal formaDinCareSeApasa,templateMeniuPrincipal formaNoua)
         {
-            Iesire.Visible = false;
-            butonOptiuni.Visible = false;
+            if (formaDinCareSeApasa.WindowState == FormWindowState.Maximized)
+            {
+                formaNoua.butonAjutor.Visible = false;
+                formaNoua.butonMaximizare.Visible = false;
+                formaNoua.butonX.Visible = false;
+                formaNoua.butonMinimizare.Visible = false;
+                formaNoua.baraDrag.Visible = false;
+            }
         }
     }
 }

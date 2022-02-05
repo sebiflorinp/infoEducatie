@@ -1,6 +1,6 @@
 ﻿namespace infoEducatie
 {
-    partial class Ajutor
+    partial class fereastraOptiuni
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Ajutor
+            // fereastraOptiuni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 450);
-            this.Name = "Ajutor";
-            this.Text = "Ajutor";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "fereastraOptiuni";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
 
         }
