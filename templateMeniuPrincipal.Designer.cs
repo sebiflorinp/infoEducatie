@@ -93,6 +93,8 @@
             // 
             // baraDrag
             // 
+            this.baraDrag.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.baraDrag.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.baraDrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.baraDrag.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;

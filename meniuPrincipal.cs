@@ -19,17 +19,15 @@ namespace infoEducatie
 
         private void butonIesire_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             fereastraOptiuni form = new fereastraOptiuni();
-            var meniuPrincipalLatime = this.Size.Width;
-            var meniuPrincipalInaltime = this.Size.Height;
-            form.Width = meniuPrincipalLatime;
-            form.Height = meniuPrincipalInaltime;
+            pastrareMarimeFereastraNoua(this, form);
             verificareMaximizareFereastraNoua(this,form);
+            this.Hide();
             form.Show();
         }
     }

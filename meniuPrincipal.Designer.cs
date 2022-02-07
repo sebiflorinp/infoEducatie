@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.butonIesire = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.butonOptiuni = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -53,24 +53,24 @@
             this.butonIesire.UseVisualStyleBackColor = false;
             this.butonIesire.Click += new System.EventHandler(this.butonIesire_Click);
             // 
-            // button1
+            // butonOptiuni
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.butonOptiuni.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.Location = new System.Drawing.Point(289, 350);
-            this.button1.Margin = new System.Windows.Forms.Padding(100);
-            this.button1.MaximumSize = new System.Drawing.Size(1000, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 30);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Optiuni";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.butonOptiuni.AutoSize = true;
+            this.butonOptiuni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.butonOptiuni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butonOptiuni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butonOptiuni.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.butonOptiuni.Location = new System.Drawing.Point(289, 350);
+            this.butonOptiuni.Margin = new System.Windows.Forms.Padding(100);
+            this.butonOptiuni.MaximumSize = new System.Drawing.Size(1000, 50);
+            this.butonOptiuni.Name = "butonOptiuni";
+            this.butonOptiuni.Size = new System.Drawing.Size(232, 30);
+            this.butonOptiuni.TabIndex = 7;
+            this.butonOptiuni.Text = "Optiuni";
+            this.butonOptiuni.UseVisualStyleBackColor = false;
+            this.butonOptiuni.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -115,13 +115,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.butonOptiuni);
             this.Controls.Add(this.butonIesire);
             this.Name = "meniuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "meniuPrincipal";
             this.Controls.SetChildIndex(this.butonIesire, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.butonOptiuni, 0);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.button3, 0);
             this.ResumeLayout(false);
@@ -132,7 +132,7 @@
         #endregion
 
         private System.Windows.Forms.Button butonIesire;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butonOptiuni;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
     }

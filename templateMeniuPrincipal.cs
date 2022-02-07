@@ -12,6 +12,8 @@ namespace infoEducatie
 {
     public partial class templateMeniuPrincipal : Form
     {
+
+        protected Rectangle marimiForma;
         public templateMeniuPrincipal()
         {
             InitializeComponent();
@@ -53,6 +55,20 @@ namespace infoEducatie
                 formaNoua.butonX.Visible = false;
                 formaNoua.butonMinimizare.Visible = false;
                 formaNoua.baraDrag.Visible = false;
+            }
+        }
+        protected void pastrareMarimeFereastraNoua(templateMeniuPrincipal fereastraDinCareSeDeschide,templateMeniuPrincipal fereastraNoua)
+        {
+            if (fereastraDinCareSeDeschide.WindowState == FormWindowState.Maximized)
+            {
+                fereastraNoua.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                var meniuPrincipalLatime = fereastraDinCareSeDeschide.Size.Width;
+                var meniuPrincipalInaltime = fereastraDinCareSeDeschide.Size.Height;
+                fereastraNoua.Width = meniuPrincipalLatime;
+                fereastraNoua.Height = meniuPrincipalInaltime;
             }
         }
     }
