@@ -26,9 +26,18 @@ namespace infoEducatie
         {
             fereastraOptiuni form = new fereastraOptiuni();
             pastrareMarimeFereastraNoua(this, form);
-            verificareMaximizareFereastraNoua(this,form);
+            verificareMaximizareFereastraNoua(this, form);
             this.Hide();
             form.Show();
+        }
+
+        protected override void butonMaximizare_Click(object sender, EventArgs e)
+        {
+            base.butonMaximizare_Click(sender, e);
+            modificareElemente(butonIesire);
+            modificareElemente(butonOptiuni);
+            modificareElemente(butonExerseaza);
+            modificareElemente(butonInvata);
         }
     }
 }

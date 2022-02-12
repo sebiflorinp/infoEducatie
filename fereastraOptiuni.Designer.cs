@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.optiuniBack = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.optiuni = new System.Windows.Forms.Label();
             this.rezolutiiDisponibile = new System.Windows.Forms.ComboBox();
             this.rezolutieNouAleasa = new System.Windows.Forms.Label();
             this.rezolutieCurenta = new System.Windows.Forms.Label();
@@ -53,19 +53,21 @@
             this.optiuniBack.UseVisualStyleBackColor = false;
             this.optiuniBack.Click += new System.EventHandler(this.optiuniBack_Click);
             // 
-            // label1
+            // optiuni
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(312, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 46);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "OPTIUNI";
+            this.optiuni.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.optiuni.AutoSize = true;
+            this.optiuni.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optiuni.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.optiuni.Location = new System.Drawing.Point(312, 28);
+            this.optiuni.Name = "optiuni";
+            this.optiuni.Size = new System.Drawing.Size(187, 46);
+            this.optiuni.TabIndex = 7;
+            this.optiuni.Text = "OPTIUNI";
             // 
             // rezolutiiDisponibile
             // 
+            this.rezolutiiDisponibile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rezolutiiDisponibile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.rezolutiiDisponibile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.rezolutiiDisponibile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -87,7 +89,7 @@
             "2560 x 1440",
             "2048 x 1080",
             "3840 x 2160"});
-            this.rezolutiiDisponibile.Location = new System.Drawing.Point(624, 130);
+            this.rezolutiiDisponibile.Location = new System.Drawing.Point(668, 130);
             this.rezolutiiDisponibile.Name = "rezolutiiDisponibile";
             this.rezolutiiDisponibile.Size = new System.Drawing.Size(114, 21);
             this.rezolutiiDisponibile.TabIndex = 8;
@@ -95,10 +97,11 @@
             // 
             // rezolutieNouAleasa
             // 
+            this.rezolutieNouAleasa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rezolutieNouAleasa.AutoSize = true;
             this.rezolutieNouAleasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rezolutieNouAleasa.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.rezolutieNouAleasa.Location = new System.Drawing.Point(548, 131);
+            this.rezolutieNouAleasa.Location = new System.Drawing.Point(507, 130);
             this.rezolutieNouAleasa.Name = "rezolutieNouAleasa";
             this.rezolutieNouAleasa.Size = new System.Drawing.Size(71, 17);
             this.rezolutieNouAleasa.TabIndex = 9;
@@ -106,10 +109,11 @@
             // 
             // rezolutieCurenta
             // 
+            this.rezolutieCurenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rezolutieCurenta.AutoSize = true;
             this.rezolutieCurenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rezolutieCurenta.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.rezolutieCurenta.Location = new System.Drawing.Point(548, 75);
+            this.rezolutieCurenta.Location = new System.Drawing.Point(507, 75);
             this.rezolutieCurenta.Name = "rezolutieCurenta";
             this.rezolutieCurenta.Size = new System.Drawing.Size(123, 17);
             this.rezolutieCurenta.TabIndex = 10;
@@ -117,10 +121,11 @@
             // 
             // valoareaRezolutieCurenta
             // 
+            this.valoareaRezolutieCurenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.valoareaRezolutieCurenta.AutoSize = true;
             this.valoareaRezolutieCurenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valoareaRezolutieCurenta.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.valoareaRezolutieCurenta.Location = new System.Drawing.Point(677, 75);
+            this.valoareaRezolutieCurenta.Location = new System.Drawing.Point(665, 75);
             this.valoareaRezolutieCurenta.Name = "valoareaRezolutieCurenta";
             this.valoareaRezolutieCurenta.Size = new System.Drawing.Size(123, 17);
             this.valoareaRezolutieCurenta.TabIndex = 11;
@@ -128,10 +133,11 @@
             // 
             // rezolutieSelectata
             // 
+            this.rezolutieSelectata.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rezolutieSelectata.AutoSize = true;
             this.rezolutieSelectata.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rezolutieSelectata.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.rezolutieSelectata.Location = new System.Drawing.Point(548, 103);
+            this.rezolutieSelectata.Location = new System.Drawing.Point(507, 103);
             this.rezolutieSelectata.Name = "rezolutieSelectata";
             this.rezolutieSelectata.Size = new System.Drawing.Size(132, 17);
             this.rezolutieSelectata.TabIndex = 12;
@@ -139,10 +145,11 @@
             // 
             // valoareRezolutieSelectata
             // 
+            this.valoareRezolutieSelectata.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.valoareRezolutieSelectata.AutoSize = true;
             this.valoareRezolutieSelectata.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valoareRezolutieSelectata.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.valoareRezolutieSelectata.Location = new System.Drawing.Point(677, 103);
+            this.valoareRezolutieSelectata.Location = new System.Drawing.Point(665, 103);
             this.valoareRezolutieSelectata.Name = "valoareRezolutieSelectata";
             this.valoareRezolutieSelectata.Size = new System.Drawing.Size(20, 17);
             this.valoareRezolutieSelectata.TabIndex = 13;
@@ -150,6 +157,8 @@
             // 
             // butonAplica
             // 
+            this.butonAplica.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.butonAplica.AutoSize = true;
             this.butonAplica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.butonAplica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butonAplica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,13 +183,13 @@
             this.Controls.Add(this.rezolutieCurenta);
             this.Controls.Add(this.rezolutieNouAleasa);
             this.Controls.Add(this.rezolutiiDisponibile);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.optiuni);
             this.Controls.Add(this.optiuniBack);
             this.Name = "fereastraOptiuni";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.fereastraOptiuni_Load);
             this.Controls.SetChildIndex(this.optiuniBack, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.optiuni, 0);
             this.Controls.SetChildIndex(this.rezolutiiDisponibile, 0);
             this.Controls.SetChildIndex(this.rezolutieNouAleasa, 0);
             this.Controls.SetChildIndex(this.rezolutieCurenta, 0);
@@ -196,7 +205,7 @@
         #endregion
 
         private System.Windows.Forms.Button optiuniBack;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label optiuni;
         private System.Windows.Forms.ComboBox rezolutiiDisponibile;
         private System.Windows.Forms.Label rezolutieNouAleasa;
         private System.Windows.Forms.Label rezolutieCurenta;

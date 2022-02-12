@@ -30,14 +30,12 @@
         {
             this.butonIesire = new System.Windows.Forms.Button();
             this.butonOptiuni = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.butonExerseaza = new System.Windows.Forms.Button();
+            this.butonInvata = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // butonIesire
             // 
-            this.butonIesire.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.butonIesire.AutoSize = true;
             this.butonIesire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.butonIesire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -55,8 +53,6 @@
             // 
             // butonOptiuni
             // 
-            this.butonOptiuni.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.butonOptiuni.AutoSize = true;
             this.butonOptiuni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.butonOptiuni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -72,49 +68,45 @@
             this.butonOptiuni.UseVisualStyleBackColor = false;
             this.butonOptiuni.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // butonExerseaza
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button2.Location = new System.Drawing.Point(289, 311);
-            this.button2.Margin = new System.Windows.Forms.Padding(100);
-            this.button2.MaximumSize = new System.Drawing.Size(1000, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(232, 30);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Exerseaza";
-            this.button2.UseVisualStyleBackColor = false;
+            this.butonExerseaza.AutoSize = true;
+            this.butonExerseaza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.butonExerseaza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butonExerseaza.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butonExerseaza.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.butonExerseaza.Location = new System.Drawing.Point(289, 311);
+            this.butonExerseaza.Margin = new System.Windows.Forms.Padding(100);
+            this.butonExerseaza.MaximumSize = new System.Drawing.Size(1000, 50);
+            this.butonExerseaza.Name = "butonExerseaza";
+            this.butonExerseaza.Size = new System.Drawing.Size(232, 30);
+            this.butonExerseaza.TabIndex = 8;
+            this.butonExerseaza.Text = "Exerseaza";
+            this.butonExerseaza.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // butonInvata
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button3.Location = new System.Drawing.Point(289, 273);
-            this.button3.Margin = new System.Windows.Forms.Padding(100);
-            this.button3.MaximumSize = new System.Drawing.Size(1000, 50);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(232, 30);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Invata";
-            this.button3.UseVisualStyleBackColor = false;
+            this.butonInvata.AutoSize = true;
+            this.butonInvata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.butonInvata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butonInvata.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butonInvata.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.butonInvata.Location = new System.Drawing.Point(289, 273);
+            this.butonInvata.Margin = new System.Windows.Forms.Padding(100);
+            this.butonInvata.MaximumSize = new System.Drawing.Size(1000, 50);
+            this.butonInvata.Name = "butonInvata";
+            this.butonInvata.Size = new System.Drawing.Size(232, 30);
+            this.butonInvata.TabIndex = 9;
+            this.butonInvata.Text = "Invata";
+            this.butonInvata.UseVisualStyleBackColor = false;
             // 
             // meniuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.butonInvata);
+            this.Controls.Add(this.butonExerseaza);
             this.Controls.Add(this.butonOptiuni);
             this.Controls.Add(this.butonIesire);
             this.Name = "meniuPrincipal";
@@ -122,8 +114,8 @@
             this.Text = "meniuPrincipal";
             this.Controls.SetChildIndex(this.butonIesire, 0);
             this.Controls.SetChildIndex(this.butonOptiuni, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.button3, 0);
+            this.Controls.SetChildIndex(this.butonExerseaza, 0);
+            this.Controls.SetChildIndex(this.butonInvata, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,7 +125,7 @@
 
         private System.Windows.Forms.Button butonIesire;
         private System.Windows.Forms.Button butonOptiuni;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button butonExerseaza;
+        private System.Windows.Forms.Button butonInvata;
     }
 }

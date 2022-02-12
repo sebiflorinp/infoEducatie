@@ -52,10 +52,36 @@ namespace infoEducatie
             rezolutie = String.Copy(valoareRezolutieSelectata.Text);
             var lungime = rezolutie.Substring(0, rezolutie.IndexOf(" "));
             var inaltime = rezolutie.Substring(rezolutie.IndexOf(" ") + 3, rezolutie.IndexOf(" "));
+            marimeDupaLungime= Int32.Parse(lungime);
+            marimeDupaInaltime= Int32.Parse(inaltime);
+            luareValoriRezolutii((int)marimeDupaLungime,(int) marimeDupaInaltime);
             this.WindowState = FormWindowState.Normal;
-            this.Height = Int32.Parse(inaltime);
-            this.Width = Int32.Parse(lungime);
+            this.Height = (int) marimeInitialInaltime;
+            this.Width = (int) marimeDupaLungime;
             valoareaRezolutieCurenta.Text = lungime + " x " + inaltime;
+            this.CenterToScreen();
+            calculareRatiiForma();
+            modificareButoaneMeniuOptiuni();
+
+        }
+
+        protected override void butonMaximizare_Click(object sender, EventArgs e)
+        {
+            base.butonMaximizare_Click(sender, e);
+            modificareButoaneMeniuOptiuni();
+        }
+
+        protected void modificareButoaneMeniuOptiuni()
+        {
+            modificareElemente(butonAplica);
+            modificareElemente(rezolutieCurenta);
+            modificareElemente(rezolutieNouAleasa);
+            modificareElemente(rezolutieSelectata);
+            modificareElemente(rezolutiiDisponibile);
+            modificareElemente(optiuni);
+            modificareElemente(optiuniBack);
+            modificareElemente(valoareaRezolutieCurenta);
+            modificareElemente(valoareRezolutieSelectata);
         }
     }
 }
