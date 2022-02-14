@@ -55,7 +55,6 @@
             // 
             // optiuni
             // 
-            this.optiuni.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.optiuni.AutoSize = true;
             this.optiuni.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optiuni.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -67,7 +66,6 @@
             // 
             // rezolutiiDisponibile
             // 
-            this.rezolutiiDisponibile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rezolutiiDisponibile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.rezolutiiDisponibile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.rezolutiiDisponibile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -97,7 +95,6 @@
             // 
             // rezolutieNouAleasa
             // 
-            this.rezolutieNouAleasa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rezolutieNouAleasa.AutoSize = true;
             this.rezolutieNouAleasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rezolutieNouAleasa.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -109,7 +106,6 @@
             // 
             // rezolutieCurenta
             // 
-            this.rezolutieCurenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rezolutieCurenta.AutoSize = true;
             this.rezolutieCurenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rezolutieCurenta.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -121,7 +117,6 @@
             // 
             // valoareaRezolutieCurenta
             // 
-            this.valoareaRezolutieCurenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.valoareaRezolutieCurenta.AutoSize = true;
             this.valoareaRezolutieCurenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valoareaRezolutieCurenta.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -133,7 +128,6 @@
             // 
             // rezolutieSelectata
             // 
-            this.rezolutieSelectata.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rezolutieSelectata.AutoSize = true;
             this.rezolutieSelectata.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rezolutieSelectata.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -145,7 +139,6 @@
             // 
             // valoareRezolutieSelectata
             // 
-            this.valoareRezolutieSelectata.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.valoareRezolutieSelectata.AutoSize = true;
             this.valoareRezolutieSelectata.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valoareRezolutieSelectata.ForeColor = System.Drawing.Color.LightSeaGreen;

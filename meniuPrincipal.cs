@@ -15,6 +15,8 @@ namespace infoEducatie
         public meniuPrincipal()
         {
             InitializeComponent();
+            luareValoriRezolutii(this.Width, this.Height);
+            calculareRatiiForma();
         }
 
         private void butonIesire_Click(object sender, EventArgs e)
@@ -34,6 +36,12 @@ namespace infoEducatie
         protected override void butonMaximizare_Click(object sender, EventArgs e)
         {
             base.butonMaximizare_Click(sender, e);
+            modificareButoaneMeniuPrincipal();
+           
+        }
+
+        protected void modificareButoaneMeniuPrincipal()
+        {
             modificareElemente(butonIesire);
             modificareElemente(butonOptiuni);
             modificareElemente(butonExerseaza);

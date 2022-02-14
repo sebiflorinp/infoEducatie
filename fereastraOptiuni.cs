@@ -13,10 +13,14 @@ namespace infoEducatie
     public partial class fereastraOptiuni : templateMeniuPrincipal
     {
 
+        protected Rectangle marimiForma;
         protected string rezolutie;
         public fereastraOptiuni()
         {
             InitializeComponent();
+            luareValoriRezolutii(this.Width,this.Height);
+            calculareRatiiForma();
+            modificareButoaneMeniuOptiuni();
         }
 
         private void optiuniBack_Click(object sender, EventArgs e)
@@ -52,12 +56,12 @@ namespace infoEducatie
             rezolutie = String.Copy(valoareRezolutieSelectata.Text);
             var lungime = rezolutie.Substring(0, rezolutie.IndexOf(" "));
             var inaltime = rezolutie.Substring(rezolutie.IndexOf(" ") + 3, rezolutie.IndexOf(" "));
-            marimeDupaLungime= Int32.Parse(lungime);
-            marimeDupaInaltime= Int32.Parse(inaltime);
-            luareValoriRezolutii((int)marimeDupaLungime,(int) marimeDupaInaltime);
+            formaFinala.Width= Int32.Parse(lungime);
+            formaFinala.Height= Int32.Parse(inaltime);
+            luareValoriRezolutii(formaFinala.Width,formaFinala.Height);
             this.WindowState = FormWindowState.Normal;
-            this.Height = (int) marimeInitialInaltime;
-            this.Width = (int) marimeDupaLungime;
+            this.Height = formaFinala.Height;
+            this.Width = formaFinala.Width;
             valoareaRezolutieCurenta.Text = lungime + " x " + inaltime;
             this.CenterToScreen();
             calculareRatiiForma();

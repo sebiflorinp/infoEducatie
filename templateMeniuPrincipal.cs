@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace infoEducatie
@@ -13,23 +7,14 @@ namespace infoEducatie
     public partial class templateMeniuPrincipal : Form
     {
 
-        protected Rectangle marimiForma;
-        protected float marimeDupaLungime;
-        protected float marimeDupaInaltime;
         protected float ratieLungime;
         protected float ratieInaltime;
         protected float ratieX;
         protected float ratieY;
-        protected float marimeInitialLungime;
-        protected float marimeInitialInaltime;
-        protected float marimeDeModificatInitialLungime;
-        protected float marimeDeModificatInitialInaltime;
-        protected float marimeDeModificatFinalLungime;
-        protected float marimeDeModificatFinalInaltime;
-        protected float locatieInitialX;
-        protected float locatieInitialY;
-        protected float locatieFinalX;
-        protected float locatieFinalY;
+        protected Rectangle formaInitiala;
+        protected Rectangle formaFinala;
+        protected Rectangle controlDeModificatInitial;
+        protected Rectangle controlDeModificatFinal;
         public templateMeniuPrincipal()
         {
             InitializeComponent();
@@ -62,9 +47,9 @@ namespace infoEducatie
             Ajutor meniuAjutor = new Ajutor();
             meniuAjutor.Show();
             meniuAjutor.Focus();
-            butonAjutor.Click-=butonAjutor_Click;
+            butonAjutor.Click -= butonAjutor_Click;
         }
-        protected void verificareMaximizareFereastraNoua(templateMeniuPrincipal formaDinCareSeApasa,templateMeniuPrincipal formaNoua)
+        protected void verificareMaximizareFereastraNoua(templateMeniuPrincipal formaDinCareSeApasa, templateMeniuPrincipal formaNoua)
         {
             if (formaDinCareSeApasa.WindowState == FormWindowState.Maximized)
             {
@@ -75,7 +60,7 @@ namespace infoEducatie
                 formaNoua.baraDrag.Visible = false;
             }
         }
-        protected void pastrareMarimeFereastraNoua(templateMeniuPrincipal fereastraDinCareSeDeschide,templateMeniuPrincipal fereastraNoua)
+        protected void pastrareMarimeFereastraNoua(templateMeniuPrincipal fereastraDinCareSeDeschide, templateMeniuPrincipal fereastraNoua)
         {
             if (fereastraDinCareSeDeschide.WindowState == FormWindowState.Maximized)
             {
@@ -83,54 +68,52 @@ namespace infoEducatie
             }
             else
             {
-                var meniuPrincipalLatime = fereastraDinCareSeDeschide.Size.Width;
-                var meniuPrincipalInaltime = fereastraDinCareSeDeschide.Size.Height;
-                fereastraNoua.Width = meniuPrincipalLatime;
-                fereastraNoua.Height = meniuPrincipalInaltime;
+                fereastraNoua.Width = fereastraDinCareSeDeschide.Size.Width;
+                fereastraNoua.Height = fereastraDinCareSeDeschide.Size.Height;
             }
         }
 
         protected void luareValoriRezolutii()
         {
-            marimeInitialLungime = this.Size.Width;
-            marimeInitialInaltime = this.Size.Height;
-            marimeDupaLungime = Screen.PrimaryScreen.Bounds.Width;
-            marimeDupaInaltime = Screen.PrimaryScreen.Bounds.Height;
+            formaInitiala.Width = this.Size.Width;
+            formaInitiala.Height = this.Size.Height;
+            formaFinala.Width = Screen.PrimaryScreen.Bounds.Width;
+            formaFinala.Height = Screen.PrimaryScreen.Bounds.Height;
         }
 
         protected void luareValoriRezolutii(int lungime, int inaltime)
         {
-            marimeInitialLungime = this.Size.Width;
-            marimeInitialInaltime = this.Size.Height;
-            marimeDupaLungime = lungime;
-            marimeDupaInaltime = inaltime;
+            formaInitiala.Width = this.Size.Width;
+            formaInitiala.Height = this.Size.Height;
+            formaFinala.Width = lungime;
+            formaFinala.Height = inaltime;
         }
 
         protected void calculareRatiiForma()
         {
-            ratieLungime = marimeDupaLungime / marimeInitialLungime;
-            ratieInaltime = marimeDupaInaltime / marimeInitialInaltime;
+            ratieLungime = (float)formaFinala.Width / formaInitiala.Width;
+            ratieInaltime = (float)formaFinala.Height / formaInitiala.Height;
         }
 
         protected void calculareRatiiElement(Control deModificat)
         {
-            locatieInitialX = deModificat.Location.X;
-            locatieInitialY = deModificat.Location.Y;
-            ratieX = marimeDupaLungime / marimeInitialLungime ;
-            ratieY = marimeDupaInaltime / marimeInitialInaltime;
+            controlDeModificatInitial.X = deModificat.Location.X;
+            controlDeModificatInitial.Y = deModificat.Location.Y;
+            ratieX = (float)formaFinala.Width / formaInitiala.Width;
+            ratieY = (float)formaFinala.Height / formaInitiala.Height;
         }
 
         protected void modificareElemente(Control deModificat)
         {
-            marimeDeModificatInitialLungime = deModificat.Size.Width;
-            marimeDeModificatInitialInaltime = deModificat.Size.Height;
+            controlDeModificatInitial.Width = deModificat.Size.Width;
+            controlDeModificatInitial.Height = deModificat.Size.Height;
             calculareRatiiElement(deModificat);
-            marimeDeModificatFinalLungime = marimeDeModificatInitialLungime * ratieLungime;
-            marimeDeModificatFinalInaltime = marimeDeModificatInitialInaltime * ratieInaltime;
-            locatieFinalX = locatieInitialX * ratieX;
-            locatieFinalY =  locatieInitialY * ratieY;
-            deModificat.Size = new Size((int) marimeDeModificatFinalLungime,(int) marimeDeModificatFinalInaltime);
-            deModificat.Location = new Point((int)locatieFinalX, (int)locatieFinalY);
+            controlDeModificatFinal.Width = (int)(controlDeModificatInitial.Width * ratieLungime);
+            controlDeModificatFinal.Height = (int)(controlDeModificatInitial.Height * ratieInaltime);
+            controlDeModificatFinal.X = (int)(controlDeModificatInitial.X * ratieX);
+            controlDeModificatFinal.Y = (int)(controlDeModificatInitial.Y * ratieY);
+            deModificat.Size = new Size(controlDeModificatFinal.Width, controlDeModificatFinal.Height);
+            deModificat.Location = new Point(controlDeModificatFinal.X, controlDeModificatFinal.Y);
         }
     }
 }
