@@ -8,7 +8,7 @@ InfoEducatie is a program for heping new students in the **art of programming**.
 > - Teaching new students programming in C++
 > - Helping High Schoolers with exercises for the Bacalaureat exam
 
-**Primăria Digital** is addressed to any person who wants to learn something new or doing exercises for exams.
+**InfoEducatie** is addressed to any person who wants to learn something new or doing exercises for exams.
 
 ## Algorithmics
 **InfoEducatie** is a C# program
