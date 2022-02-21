@@ -64,6 +64,7 @@
     <Compile Include="meniuPrincipal.Designer.cs">
       <DependentUpon>meniuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="templateMeniuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>

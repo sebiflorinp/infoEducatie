@@ -66,7 +66,7 @@
             this.butonOptiuni.TabIndex = 7;
             this.butonOptiuni.Text = "Optiuni";
             this.butonOptiuni.UseVisualStyleBackColor = false;
-            this.butonOptiuni.Click += new System.EventHandler(this.button1_Click);
+            this.butonOptiuni.Click += new System.EventHandler(this.butonOptiuni_Click);
             // 
             // butonExerseaza
             // 
@@ -99,6 +99,7 @@
             this.butonInvata.TabIndex = 9;
             this.butonInvata.Text = "Invata";
             this.butonInvata.UseVisualStyleBackColor = false;
+            this.butonInvata.Click += new System.EventHandler(this.butonInvata_Click);
             // 
             // meniuPrincipal
             // 
@@ -112,6 +113,7 @@
             this.Name = "meniuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "meniuPrincipal";
+            this.Load += new System.EventHandler(this.meniuPrincipal_Load);
             this.Controls.SetChildIndex(this.butonIesire, 0);
             this.Controls.SetChildIndex(this.butonOptiuni, 0);
             this.Controls.SetChildIndex(this.butonExerseaza, 0);

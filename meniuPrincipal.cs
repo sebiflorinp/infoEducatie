@@ -15,22 +15,14 @@ namespace infoEducatie
         public meniuPrincipal()
         {
             InitializeComponent();
-            luareValoriRezolutii(this.Width, this.Height);
-            calculareRatiiForma();
+            this.Width = retinereRezolutie.lungime;
+            this.Height = retinereRezolutie.inaltime;
+            modificareButoaneMeniuPrincipal();
         }
 
         private void butonIesire_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            fereastraOptiuni form = new fereastraOptiuni();
-            pastrareMarimeFereastraNoua(this, form);
-            verificareMaximizareFereastraNoua(this, form);
-            this.Hide();
-            form.Show();
         }
 
         protected override void butonMaximizare_Click(object sender, EventArgs e)
@@ -47,5 +39,32 @@ namespace infoEducatie
             modificareElemente(butonExerseaza);
             modificareElemente(butonInvata);
         }
+
+        private void butonOptiuni_Click(object sender, EventArgs e)
+        {
+            fereastraOptiuni form = new fereastraOptiuni();
+            retinereFormaAnterioara.formaAnteriora = this;
+            trecereForme(this, form);
+        }
+
+        private void butonInvata_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void meniuPrincipal_Load(object sender, EventArgs e)
+        {
+            aplicareCuloare(butonIesire);
+            aplicareCuloare(butonExerseaza);
+            aplicareCuloare(butonInvata);
+            aplicareCuloare(butonOptiuni);
+        }
     }
+    public static class retinereFormaAnterioara
+    {
+        public static Form formaAnteriora;
+    }
+
+
 }
+

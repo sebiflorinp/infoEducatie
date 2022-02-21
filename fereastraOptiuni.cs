@@ -18,18 +18,14 @@ namespace infoEducatie
         public fereastraOptiuni()
         {
             InitializeComponent();
-            luareValoriRezolutii(this.Width,this.Height);
-            calculareRatiiForma();
             modificareButoaneMeniuOptiuni();
         }
 
         private void optiuniBack_Click(object sender, EventArgs e)
         {
-            templateMeniuPrincipal meniuPrincipal = new meniuPrincipal();
-            pastrareMarimeFereastraNoua(this, meniuPrincipal);
-            verificareMaximizareFereastraNoua(this, meniuPrincipal);
+            trecereForme(this, retinereFormaAnterioara.formaAnteriora);
             Close();
-            meniuPrincipal.Show();
+
         }
 
         private void rezolutiiDisponibile_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,13 +54,12 @@ namespace infoEducatie
             var inaltime = rezolutie.Substring(rezolutie.IndexOf(" ") + 3, rezolutie.IndexOf(" "));
             formaFinala.Width= Int32.Parse(lungime);
             formaFinala.Height= Int32.Parse(inaltime);
-            luareValoriRezolutii(formaFinala.Width,formaFinala.Height);
+            luareValoriRezolutii(formaInitiala.Width,formaInitiala.Height,formaFinala.Width,formaFinala.Height);
             this.WindowState = FormWindowState.Normal;
             this.Height = formaFinala.Height;
             this.Width = formaFinala.Width;
             valoareaRezolutieCurenta.Text = lungime + " x " + inaltime;
             this.CenterToScreen();
-            calculareRatiiForma();
             modificareButoaneMeniuOptiuni();
 
         }

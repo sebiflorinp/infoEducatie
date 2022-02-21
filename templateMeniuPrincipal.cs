@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Configuration;
+using infoEducatie.Properties;
 
 namespace infoEducatie
 {
     public partial class templateMeniuPrincipal : Form
     {
 
-        protected float ratieLungime;
-        protected float ratieInaltime;
-        protected float ratieX;
-        protected float ratieY;
+        protected float ratieLungimeX;
+        protected float ratieInaltimeY;
         protected Rectangle formaInitiala;
         protected Rectangle formaFinala;
         protected Rectangle controlDeModificatInitial;
@@ -18,102 +18,131 @@ namespace infoEducatie
         public templateMeniuPrincipal()
         {
             InitializeComponent();
+            retinereRezolutie.lungime = Properties.Settings.Default.lungime;
+            retinereRezolutie.inaltime = Properties.Settings.Default.inaltime;
+            if (Properties.Settings.Default.maximizat == 1)
+            {
+                maximizare();
+            }
+            else
+            {
+                luareValoriRezolutii(retinereRezolutie.lungime, retinereRezolutie.inaltime,this.Width,this.Height);
+                calculareRatiiForma();
+            }
+
+            retinereCuloare.culoare=Properties.Settings.Default.culoare;
+            aplicareCuloare();
         }
 
         private void butonX_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
+        } // inchide aplicatia
 
         protected virtual void butonMaximizare_Click(object sender, EventArgs e)
         {
-            luareValoriRezolutii();
-            calculareRatiiForma();
+            retinereRezolutie.maximizat = 1;
+            Properties.Settings.Default.Save();
+            maximizare();
+        } // maximizeaza fereastra aplicatiei
+        protected virtual void maximizare()
+        {
             WindowState = FormWindowState.Maximized;
+            luareValoriRezolutii(Screen.PrimaryScreen.Bounds.Width,Screen.PrimaryScreen.Bounds.Height,this.Width,this.Height);
+            calculareRatiiForma();
             butonAjutor.Visible = false;
             butonMaximizare.Visible = false;
             butonX.Visible = false;
             butonMinimizare.Visible = false;
             baraDrag.Visible = false;
-        }
+        } 
 
         private void butonMinimizare_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
+        } // minimizeaza aplicatia
 
         private void butonAjutor_Click(object sender, EventArgs e)
         {
             Ajutor meniuAjutor = new Ajutor();
+            retinereFormaAnterioara.formaAnteriora = this;
             meniuAjutor.Show();
-            meniuAjutor.Focus();
-            butonAjutor.Click -= butonAjutor_Click;
-        }
-        protected void verificareMaximizareFereastraNoua(templateMeniuPrincipal formaDinCareSeApasa, templateMeniuPrincipal formaNoua)
+            Hide();
+        } // deschide fereastra de ajutor
+        protected void luareValoriRezolutii(int lungimeNoua, int inaltimeNoua, int lungimeVeche, int inaltimeVeche)
         {
-            if (formaDinCareSeApasa.WindowState == FormWindowState.Maximized)
-            {
-                formaNoua.butonAjutor.Visible = false;
-                formaNoua.butonMaximizare.Visible = false;
-                formaNoua.butonX.Visible = false;
-                formaNoua.butonMinimizare.Visible = false;
-                formaNoua.baraDrag.Visible = false;
-            }
-        }
-        protected void pastrareMarimeFereastraNoua(templateMeniuPrincipal fereastraDinCareSeDeschide, templateMeniuPrincipal fereastraNoua)
-        {
-            if (fereastraDinCareSeDeschide.WindowState == FormWindowState.Maximized)
-            {
-                fereastraNoua.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                fereastraNoua.Width = fereastraDinCareSeDeschide.Size.Width;
-                fereastraNoua.Height = fereastraDinCareSeDeschide.Size.Height;
-            }
-        }
-
-        protected void luareValoriRezolutii()
-        {
-            formaInitiala.Width = this.Size.Width;
-            formaInitiala.Height = this.Size.Height;
-            formaFinala.Width = Screen.PrimaryScreen.Bounds.Width;
-            formaFinala.Height = Screen.PrimaryScreen.Bounds.Height;
-        }
-
-        protected void luareValoriRezolutii(int lungime, int inaltime)
-        {
-            formaInitiala.Width = this.Size.Width;
-            formaInitiala.Height = this.Size.Height;
-            formaFinala.Width = lungime;
-            formaFinala.Height = inaltime;
-        }
+            formaInitiala.Width = lungimeVeche;
+            formaInitiala.Height = inaltimeVeche;
+            formaFinala.Width = lungimeNoua;
+            formaFinala.Height = inaltimeNoua;
+        } // cu parametrii cand se trece de la o rezolutie la alta
 
         protected void calculareRatiiForma()
         {
-            ratieLungime = (float)formaFinala.Width / formaInitiala.Width;
-            ratieInaltime = (float)formaFinala.Height / formaInitiala.Height;
-        }
+            ratieLungimeX = (float)formaFinala.Width / formaInitiala.Width;
+            ratieInaltimeY = (float)formaFinala.Height / formaInitiala.Height;
+        } // ok;
 
-        protected void calculareRatiiElement(Control deModificat)
+        protected void calculareRatiiForma(Form formaInitiala,Form formaNoua)
         {
-            controlDeModificatInitial.X = deModificat.Location.X;
-            controlDeModificatInitial.Y = deModificat.Location.Y;
-            ratieX = (float)formaFinala.Width / formaInitiala.Width;
-            ratieY = (float)formaFinala.Height / formaInitiala.Height;
-        }
+            ratieLungimeX = (float)formaInitiala.Width / formaNoua.Width;
+            ratieInaltimeY = (float)formaInitiala.Height / formaNoua.Height;
+        } // ok;
 
-        protected void modificareElemente(Control deModificat)
+        protected void modificareElemente(Control deModificat) // ok?
         {
             controlDeModificatInitial.Width = deModificat.Size.Width;
             controlDeModificatInitial.Height = deModificat.Size.Height;
-            calculareRatiiElement(deModificat);
-            controlDeModificatFinal.Width = (int)(controlDeModificatInitial.Width * ratieLungime);
-            controlDeModificatFinal.Height = (int)(controlDeModificatInitial.Height * ratieInaltime);
-            controlDeModificatFinal.X = (int)(controlDeModificatInitial.X * ratieX);
-            controlDeModificatFinal.Y = (int)(controlDeModificatInitial.Y * ratieY);
+            controlDeModificatInitial.X = deModificat.Location.X;
+            controlDeModificatInitial.Y = deModificat.Location.Y;
+            controlDeModificatFinal.Width = (int)(controlDeModificatInitial.Width * ratieLungimeX);
+            controlDeModificatFinal.Height = (int)(controlDeModificatInitial.Height * ratieInaltimeY);
+            controlDeModificatFinal.X = (int)(controlDeModificatInitial.X * ratieLungimeX);
+            controlDeModificatFinal.Y = (int)(controlDeModificatInitial.Y * ratieInaltimeY);
             deModificat.Size = new Size(controlDeModificatFinal.Width, controlDeModificatFinal.Height);
             deModificat.Location = new Point(controlDeModificatFinal.X, controlDeModificatFinal.Y);
         }
+        protected void trecereForme(Form formaInitiala, Form formaNoua)
+        {
+            calculareRatiiForma(formaInitiala,formaNoua);
+            formaNoua.Size = formaInitiala.Size;
+            formaNoua.Location = formaInitiala.Location;
+            formaNoua.Show();
+            formaInitiala.Hide();
+        }
+
+        protected virtual void aplicareCuloare()
+        {
+            aplicareCuloare(butonAjutor);
+            aplicareCuloare(butonX);
+            aplicareCuloare(butonMaximizare);
+            aplicareCuloare(butonMinimizare);
+            aplicareCuloare(baraDrag);
+        }
+
+        protected void aplicareCuloare(Button buton)
+        {
+            buton.FlatAppearance.BorderColor = retinereCuloare.culoare;
+            buton.ForeColor = retinereCuloare.culoare;
+        } //  pt butoane cu sau fara scris in ele
+
+        protected void aplicareCuloare(Label label)
+        {
+            label.ForeColor = retinereCuloare.culoare;
+        } // pt label-uri
+
+    }
+    public static class retinereRezolutie
+    {
+        public static int inaltime;
+        public static int lungime;
+        public static int maximizat;
+        public static int inaltimeStadard=450;
+        public static int lungimeStandard = 800;
+    }
+
+    public static class retinereCuloare
+    {
+        public static Color culoare;
     }
 }
