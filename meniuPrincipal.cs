@@ -52,8 +52,9 @@ namespace infoEducatie
 
         }
 
-        private void meniuPrincipal_Load(object sender, EventArgs e)
+        protected override void aplicareCuloare()
         {
+            base.aplicareCuloare();
             aplicareCuloare(butonIesire);
             aplicareCuloare(butonExerseaza);
             aplicareCuloare(butonInvata);

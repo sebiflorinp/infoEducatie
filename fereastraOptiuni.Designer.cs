@@ -274,17 +274,18 @@
             // 
             // culori
             // 
+            this.culori.AutoSize = true;
             this.culori.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.culori.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.culori.Location = new System.Drawing.Point(107, 80);
             this.culori.Name = "culori";
-            this.culori.Size = new System.Drawing.Size(146, 50);
+            this.culori.Size = new System.Drawing.Size(127, 54);
             this.culori.TabIndex = 15;
             this.culori.Text = "Culori";
+            this.culori.UseCompatibleTextRendering = true;
             // 
             // bgCulori
             // 
-            this.bgCulori.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bgCulori.AutoSize = true;
             this.bgCulori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.bgCulori.Enabled = false;
@@ -299,7 +300,6 @@
             // 
             // culoare9
             // 
-            this.culoare9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare9.AutoSize = true;
             this.culoare9.BackColor = System.Drawing.Color.LightCoral;
             this.culoare9.FlatAppearance.BorderSize = 0;
@@ -314,7 +314,6 @@
             // 
             // culoare7
             // 
-            this.culoare7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare7.AutoSize = true;
             this.culoare7.BackColor = System.Drawing.Color.Firebrick;
             this.culoare7.FlatAppearance.BorderSize = 0;
@@ -329,7 +328,6 @@
             // 
             // culoare6
             // 
-            this.culoare6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare6.AutoSize = true;
             this.culoare6.BackColor = System.Drawing.Color.DarkRed;
             this.culoare6.FlatAppearance.BorderSize = 0;
@@ -344,7 +342,6 @@
             // 
             // culoare10
             // 
-            this.culoare10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare10.AutoSize = true;
             this.culoare10.BackColor = System.Drawing.Color.RosyBrown;
             this.culoare10.FlatAppearance.BorderSize = 0;
@@ -359,7 +356,6 @@
             // 
             // culoare5
             // 
-            this.culoare5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare5.AutoSize = true;
             this.culoare5.BackColor = System.Drawing.Color.White;
             this.culoare5.FlatAppearance.BorderSize = 0;
@@ -374,7 +370,6 @@
             // 
             // culoare4
             // 
-            this.culoare4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare4.AutoSize = true;
             this.culoare4.BackColor = System.Drawing.Color.Gainsboro;
             this.culoare4.FlatAppearance.BorderSize = 0;
@@ -389,7 +384,6 @@
             // 
             // culoare3
             // 
-            this.culoare3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare3.AutoSize = true;
             this.culoare3.BackColor = System.Drawing.Color.DarkGray;
             this.culoare3.FlatAppearance.BorderSize = 0;
@@ -404,7 +398,6 @@
             // 
             // culoare2
             // 
-            this.culoare2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare2.AutoSize = true;
             this.culoare2.BackColor = System.Drawing.Color.DimGray;
             this.culoare2.FlatAppearance.BorderSize = 0;
@@ -419,7 +412,6 @@
             // 
             // culoare1
             // 
-            this.culoare1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare1.AutoSize = true;
             this.culoare1.BackColor = System.Drawing.Color.Black;
             this.culoare1.FlatAppearance.BorderSize = 0;
@@ -434,7 +426,6 @@
             // 
             // culoare8
             // 
-            this.culoare8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare8.AutoSize = true;
             this.culoare8.BackColor = System.Drawing.Color.IndianRed;
             this.culoare8.FlatAppearance.BorderSize = 0;
@@ -449,7 +440,6 @@
             // 
             // culoare11
             // 
-            this.culoare11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare11.AutoSize = true;
             this.culoare11.BackColor = System.Drawing.Color.OrangeRed;
             this.culoare11.FlatAppearance.BorderSize = 0;
@@ -464,7 +454,6 @@
             // 
             // culoare12
             // 
-            this.culoare12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare12.AutoSize = true;
             this.culoare12.BackColor = System.Drawing.Color.Coral;
             this.culoare12.FlatAppearance.BorderSize = 0;
@@ -479,7 +468,6 @@
             // 
             // culoare13
             // 
-            this.culoare13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare13.AutoSize = true;
             this.culoare13.BackColor = System.Drawing.Color.DarkSalmon;
             this.culoare13.FlatAppearance.BorderSize = 0;
@@ -494,7 +482,6 @@
             // 
             // culoare14
             // 
-            this.culoare14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare14.AutoSize = true;
             this.culoare14.BackColor = System.Drawing.Color.LightSalmon;
             this.culoare14.FlatAppearance.BorderSize = 0;
@@ -509,7 +496,6 @@
             // 
             // culoare15
             // 
-            this.culoare15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare15.AutoSize = true;
             this.culoare15.BackColor = System.Drawing.Color.Salmon;
             this.culoare15.FlatAppearance.BorderSize = 0;
@@ -524,7 +510,6 @@
             // 
             // culoare16
             // 
-            this.culoare16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare16.AutoSize = true;
             this.culoare16.BackColor = System.Drawing.Color.SaddleBrown;
             this.culoare16.FlatAppearance.BorderSize = 0;
@@ -539,7 +524,6 @@
             // 
             // culoare17
             // 
-            this.culoare17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare17.AutoSize = true;
             this.culoare17.BackColor = System.Drawing.Color.Chocolate;
             this.culoare17.FlatAppearance.BorderSize = 0;
@@ -554,7 +538,6 @@
             // 
             // culoare19
             // 
-            this.culoare19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare19.AutoSize = true;
             this.culoare19.BackColor = System.Drawing.Color.SandyBrown;
             this.culoare19.FlatAppearance.BorderSize = 0;
@@ -569,7 +552,6 @@
             // 
             // culoare18
             // 
-            this.culoare18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare18.AutoSize = true;
             this.culoare18.BackColor = System.Drawing.Color.Peru;
             this.culoare18.FlatAppearance.BorderSize = 0;
@@ -584,7 +566,6 @@
             // 
             // culoare20
             // 
-            this.culoare20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare20.AutoSize = true;
             this.culoare20.BackColor = System.Drawing.Color.DarkOrange;
             this.culoare20.FlatAppearance.BorderSize = 0;
@@ -599,7 +580,6 @@
             // 
             // culoare21
             // 
-            this.culoare21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare21.AutoSize = true;
             this.culoare21.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.culoare21.FlatAppearance.BorderSize = 0;
@@ -614,7 +594,6 @@
             // 
             // culoare22
             // 
-            this.culoare22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare22.AutoSize = true;
             this.culoare22.BackColor = System.Drawing.Color.Gold;
             this.culoare22.FlatAppearance.BorderSize = 0;
@@ -629,7 +608,6 @@
             // 
             // culoare23
             // 
-            this.culoare23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare23.AutoSize = true;
             this.culoare23.BackColor = System.Drawing.Color.Goldenrod;
             this.culoare23.FlatAppearance.BorderSize = 0;
@@ -644,7 +622,6 @@
             // 
             // culoare24
             // 
-            this.culoare24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare24.AutoSize = true;
             this.culoare24.BackColor = System.Drawing.Color.Khaki;
             this.culoare24.FlatAppearance.BorderSize = 0;
@@ -659,7 +636,6 @@
             // 
             // culoare25
             // 
-            this.culoare25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare25.AutoSize = true;
             this.culoare25.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.culoare25.FlatAppearance.BorderSize = 0;
@@ -674,7 +650,6 @@
             // 
             // culoare26
             // 
-            this.culoare26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare26.AutoSize = true;
             this.culoare26.BackColor = System.Drawing.Color.DarkGreen;
             this.culoare26.FlatAppearance.BorderSize = 0;
@@ -689,7 +664,6 @@
             // 
             // culoare27
             // 
-            this.culoare27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare27.AutoSize = true;
             this.culoare27.BackColor = System.Drawing.Color.Lime;
             this.culoare27.FlatAppearance.BorderSize = 0;
@@ -704,7 +678,6 @@
             // 
             // culoare28
             // 
-            this.culoare28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare28.AutoSize = true;
             this.culoare28.BackColor = System.Drawing.Color.LimeGreen;
             this.culoare28.FlatAppearance.BorderSize = 0;
@@ -719,7 +692,6 @@
             // 
             // culoare29
             // 
-            this.culoare29.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare29.AutoSize = true;
             this.culoare29.BackColor = System.Drawing.Color.LightGreen;
             this.culoare29.FlatAppearance.BorderSize = 0;
@@ -734,7 +706,6 @@
             // 
             // culoare30
             // 
-            this.culoare30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare30.AutoSize = true;
             this.culoare30.BackColor = System.Drawing.Color.PaleGreen;
             this.culoare30.FlatAppearance.BorderSize = 0;
@@ -749,7 +720,6 @@
             // 
             // culoare39
             // 
-            this.culoare39.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare39.AutoSize = true;
             this.culoare39.BackColor = System.Drawing.Color.Violet;
             this.culoare39.FlatAppearance.BorderSize = 0;
@@ -764,7 +734,6 @@
             // 
             // culoare50
             // 
-            this.culoare50.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare50.AutoSize = true;
             this.culoare50.BackColor = System.Drawing.Color.LavenderBlush;
             this.culoare50.FlatAppearance.BorderSize = 0;
@@ -779,7 +748,6 @@
             // 
             // culoare47
             // 
-            this.culoare47.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare47.AutoSize = true;
             this.culoare47.BackColor = System.Drawing.Color.PaleVioletRed;
             this.culoare47.FlatAppearance.BorderSize = 0;
@@ -794,7 +762,6 @@
             // 
             // culoare40
             // 
-            this.culoare40.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare40.AutoSize = true;
             this.culoare40.BackColor = System.Drawing.Color.Plum;
             this.culoare40.FlatAppearance.BorderSize = 0;
@@ -809,7 +776,6 @@
             // 
             // culoare48
             // 
-            this.culoare48.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare48.AutoSize = true;
             this.culoare48.BackColor = System.Drawing.Color.LightPink;
             this.culoare48.FlatAppearance.BorderSize = 0;
@@ -824,7 +790,6 @@
             // 
             // culoare38
             // 
-            this.culoare38.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare38.AutoSize = true;
             this.culoare38.BackColor = System.Drawing.Color.MediumOrchid;
             this.culoare38.FlatAppearance.BorderSize = 0;
@@ -839,7 +804,6 @@
             // 
             // culoare37
             // 
-            this.culoare37.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare37.AutoSize = true;
             this.culoare37.BackColor = System.Drawing.Color.DarkViolet;
             this.culoare37.FlatAppearance.BorderSize = 0;
@@ -854,7 +818,6 @@
             // 
             // culoare49
             // 
-            this.culoare49.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare49.AutoSize = true;
             this.culoare49.BackColor = System.Drawing.Color.Pink;
             this.culoare49.FlatAppearance.BorderSize = 0;
@@ -869,7 +832,6 @@
             // 
             // culoare36
             // 
-            this.culoare36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare36.AutoSize = true;
             this.culoare36.BackColor = System.Drawing.Color.Indigo;
             this.culoare36.FlatAppearance.BorderSize = 0;
@@ -884,7 +846,6 @@
             // 
             // culoare34
             // 
-            this.culoare34.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare34.AutoSize = true;
             this.culoare34.BackColor = System.Drawing.Color.Turquoise;
             this.culoare34.FlatAppearance.BorderSize = 0;
@@ -899,7 +860,6 @@
             // 
             // culoare46
             // 
-            this.culoare46.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare46.AutoSize = true;
             this.culoare46.BackColor = System.Drawing.Color.Crimson;
             this.culoare46.FlatAppearance.BorderSize = 0;
@@ -914,7 +874,6 @@
             // 
             // culoare45
             // 
-            this.culoare45.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare45.AutoSize = true;
             this.culoare45.BackColor = System.Drawing.Color.HotPink;
             this.culoare45.FlatAppearance.BorderSize = 0;
@@ -929,7 +888,6 @@
             // 
             // culoare35
             // 
-            this.culoare35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare35.AutoSize = true;
             this.culoare35.BackColor = System.Drawing.Color.Aquamarine;
             this.culoare35.FlatAppearance.BorderSize = 0;
@@ -944,7 +902,6 @@
             // 
             // culoare44
             // 
-            this.culoare44.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare44.AutoSize = true;
             this.culoare44.BackColor = System.Drawing.Color.Orchid;
             this.culoare44.FlatAppearance.BorderSize = 0;
@@ -959,7 +916,6 @@
             // 
             // culoare31
             // 
-            this.culoare31.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare31.AutoSize = true;
             this.culoare31.BackColor = System.Drawing.Color.DarkCyan;
             this.culoare31.FlatAppearance.BorderSize = 0;
@@ -974,7 +930,6 @@
             // 
             // culoare43
             // 
-            this.culoare43.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare43.AutoSize = true;
             this.culoare43.BackColor = System.Drawing.Color.MediumVioletRed;
             this.culoare43.FlatAppearance.BorderSize = 0;
@@ -989,7 +944,6 @@
             // 
             // culoare32
             // 
-            this.culoare32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare32.AutoSize = true;
             this.culoare32.BackColor = System.Drawing.Color.LightSeaGreen;
             this.culoare32.FlatAppearance.BorderSize = 0;
@@ -1004,7 +958,6 @@
             // 
             // culoare33
             // 
-            this.culoare33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare33.AutoSize = true;
             this.culoare33.BackColor = System.Drawing.Color.MediumTurquoise;
             this.culoare33.FlatAppearance.BorderSize = 0;
@@ -1019,7 +972,6 @@
             // 
             // culoare41
             // 
-            this.culoare41.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare41.AutoSize = true;
             this.culoare41.BackColor = System.Drawing.Color.DarkMagenta;
             this.culoare41.FlatAppearance.BorderSize = 0;
@@ -1034,7 +986,6 @@
             // 
             // culoare42
             // 
-            this.culoare42.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare42.AutoSize = true;
             this.culoare42.BackColor = System.Drawing.Color.Fuchsia;
             this.culoare42.FlatAppearance.BorderSize = 0;
@@ -1049,7 +1000,6 @@
             // 
             // culoare51
             // 
-            this.culoare51.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare51.AutoSize = true;
             this.culoare51.BackColor = System.Drawing.Color.Black;
             this.culoare51.FlatAppearance.BorderSize = 0;
@@ -1064,7 +1014,6 @@
             // 
             // culoare54
             // 
-            this.culoare54.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare54.AutoSize = true;
             this.culoare54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.culoare54.FlatAppearance.BorderSize = 0;
@@ -1079,7 +1028,6 @@
             // 
             // culoare58
             // 
-            this.culoare58.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare58.AutoSize = true;
             this.culoare58.BackColor = System.Drawing.Color.Red;
             this.culoare58.FlatAppearance.BorderSize = 0;
@@ -1094,7 +1042,6 @@
             // 
             // culoare60
             // 
-            this.culoare60.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare60.AutoSize = true;
             this.culoare60.BackColor = System.Drawing.Color.Yellow;
             this.culoare60.FlatAppearance.BorderSize = 0;
@@ -1109,7 +1056,6 @@
             // 
             // culoare59
             // 
-            this.culoare59.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare59.AutoSize = true;
             this.culoare59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.culoare59.FlatAppearance.BorderSize = 0;
@@ -1124,7 +1070,6 @@
             // 
             // culoare57
             // 
-            this.culoare57.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare57.AutoSize = true;
             this.culoare57.BackColor = System.Drawing.Color.Lime;
             this.culoare57.FlatAppearance.BorderSize = 0;
@@ -1139,7 +1084,6 @@
             // 
             // culoare56
             // 
-            this.culoare56.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare56.AutoSize = true;
             this.culoare56.BackColor = System.Drawing.Color.Blue;
             this.culoare56.FlatAppearance.BorderSize = 0;
@@ -1154,7 +1098,6 @@
             // 
             // culoare55
             // 
-            this.culoare55.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare55.AutoSize = true;
             this.culoare55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.culoare55.FlatAppearance.BorderSize = 0;
@@ -1169,7 +1112,6 @@
             // 
             // culoare53
             // 
-            this.culoare53.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare53.AutoSize = true;
             this.culoare53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.culoare53.FlatAppearance.BorderSize = 0;
@@ -1184,7 +1126,6 @@
             // 
             // culoare52
             // 
-            this.culoare52.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoare52.AutoSize = true;
             this.culoare52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.culoare52.FlatAppearance.BorderSize = 0;
@@ -1219,7 +1160,6 @@
             // 
             // culoareCurenta
             // 
-            this.culoareCurenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoareCurenta.AutoSize = true;
             this.culoareCurenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.culoareCurenta.FlatAppearance.BorderSize = 0;
@@ -1234,7 +1174,6 @@
             // 
             // culoareSelectata
             // 
-            this.culoareSelectata.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.culoareSelectata.AutoSize = true;
             this.culoareSelectata.BackColor = System.Drawing.Color.Blue;
             this.culoareSelectata.FlatAppearance.BorderSize = 0;
@@ -1249,7 +1188,6 @@
             // 
             // bgRezolutii
             // 
-            this.bgRezolutii.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bgRezolutii.AutoSize = true;
             this.bgRezolutii.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.bgRezolutii.Enabled = false;

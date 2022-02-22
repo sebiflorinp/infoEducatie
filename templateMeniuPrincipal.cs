@@ -29,9 +29,6 @@ namespace infoEducatie
                 luareValoriRezolutii(retinereRezolutie.lungime, retinereRezolutie.inaltime,this.Width,this.Height);
                 calculareRatiiForma();
             }
-
-            retinereCuloare.culoare=Properties.Settings.Default.culoare;
-            aplicareCuloare();
         }
 
         private void butonX_Click(object sender, EventArgs e)
@@ -131,6 +128,11 @@ namespace infoEducatie
             label.ForeColor = retinereCuloare.culoare;
         } // pt label-uri
 
+        protected virtual void templateMeniuPrincipal_Load(object sender, EventArgs e)
+        {
+            retinereCuloare.culoare = Properties.Settings.Default.culoare;
+            aplicareCuloare();
+        }
     }
     public static class retinereRezolutie
     {

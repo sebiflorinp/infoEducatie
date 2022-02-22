@@ -80,7 +80,7 @@
             this.butonMinimizare.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butonMinimizare.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.butonMinimizare.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.butonMinimizare.Location = new System.Drawing.Point(582, 0);
+            this.butonMinimizare.Location = new System.Drawing.Point(583, 0);
             this.butonMinimizare.Name = "butonMinimizare";
             this.butonMinimizare.Size = new System.Drawing.Size(73, 22);
             this.butonMinimizare.TabIndex = 3;
@@ -101,10 +101,10 @@
             this.baraDrag.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.baraDrag.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.baraDrag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.baraDrag.Location = new System.Drawing.Point(0, 0);
+            this.baraDrag.Location = new System.Drawing.Point(1, 0);
             this.baraDrag.Name = "baraDrag";
             this.baraDrag.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.baraDrag.Size = new System.Drawing.Size(510, 22);
+            this.baraDrag.Size = new System.Drawing.Size(511, 22);
             this.baraDrag.TabIndex = 4;
             this.baraDrag.UseVisualStyleBackColor = false;
             // 
@@ -117,7 +117,7 @@
             this.butonAjutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butonAjutor.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.butonAjutor.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.butonAjutor.Location = new System.Drawing.Point(509, 0);
+            this.butonAjutor.Location = new System.Drawing.Point(511, 0);
             this.butonAjutor.Name = "butonAjutor";
             this.butonAjutor.Size = new System.Drawing.Size(73, 22);
             this.butonAjutor.TabIndex = 5;
@@ -148,6 +148,7 @@
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "templateMeniuPrincipal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.templateMeniuPrincipal_Load);
             this.ResumeLayout(false);
 
         }
