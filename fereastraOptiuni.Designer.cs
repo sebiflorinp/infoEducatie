@@ -1175,7 +1175,7 @@
             // culoareSelectata
             // 
             this.culoareSelectata.AutoSize = true;
-            this.culoareSelectata.BackColor = System.Drawing.Color.Blue;
+            this.culoareSelectata.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.culoareSelectata.FlatAppearance.BorderSize = 0;
             this.culoareSelectata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.culoareSelectata.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

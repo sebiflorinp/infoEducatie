@@ -113,6 +113,7 @@
             this.Name = "meniuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "meniuPrincipal";
+            this.Load += new System.EventHandler(this.meniuPrincipal_Load);
             this.Controls.SetChildIndex(this.butonIesire, 0);
             this.Controls.SetChildIndex(this.butonOptiuni, 0);
             this.Controls.SetChildIndex(this.butonExerseaza, 0);

@@ -19,13 +19,15 @@ namespace infoEducatie
         {
             InitializeComponent();
             modificareButoaneMeniuOptiuni();
+            culoareCurenta.BackColor = retinereCuloare.culoare;
         }
 
         private void optiuniBack_Click(object sender, EventArgs e)
         {
             trecereForme(this, retinereFormaAnterioara.formaAnteriora);
             Close();
-        }
+            Application.Restart();
+        } // merge in forma care a deschis aceasta forma
 
         protected override void aplicareCuloare()
         {
@@ -45,7 +47,7 @@ namespace infoEducatie
             aplicareCuloare(valoareRezolutieSelectata);
             aplicareCuloare(butonAplica);
             rezolutiiDisponibile.ForeColor = retinereCuloare.culoare;
-        }
+        } // ce se coloreaza normal + elemente specifice acestei forme
 
         private void rezolutiiDisponibile_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -68,26 +70,36 @@ namespace infoEducatie
 
         private void butonAplica_Click(object sender, EventArgs e)
         {
-            rezolutie = String.Copy(valoareRezolutieSelectata.Text);
-            var lungime = rezolutie.Substring(0, rezolutie.IndexOf(" "));
-            var inaltime = rezolutie.Substring(rezolutie.IndexOf(" ") + 3, rezolutie.IndexOf(" "));
-            formaFinala.Width= Int32.Parse(lungime);
-            formaFinala.Height= Int32.Parse(inaltime);
-            luareValoriRezolutii(formaInitiala.Width,formaInitiala.Height,formaFinala.Width,formaFinala.Height);
-            this.WindowState = FormWindowState.Normal;
-            this.Height = formaFinala.Height;
-            this.Width = formaFinala.Width;
-            valoareaRezolutieCurenta.Text = lungime + " x " + inaltime;
-            this.CenterToScreen();
-            modificareButoaneMeniuOptiuni();
-
+            if (valoareRezolutieSelectata.Text!="...")
+            {
+                rezolutie = String.Copy(valoareRezolutieSelectata.Text);
+                var lungime = rezolutie.Substring(0, rezolutie.IndexOf(" "));
+                var inaltime = rezolutie.Substring(rezolutie.IndexOf(" ") + 3, rezolutie.IndexOf(" "));
+                formaFinala.Width = Int32.Parse(lungime);
+                formaFinala.Height = Int32.Parse(inaltime);
+                luareValoriRezolutii(formaInitiala.Width, formaInitiala.Height, formaFinala.Width, formaFinala.Height);
+                this.WindowState = FormWindowState.Normal;
+                this.Height = formaFinala.Height;
+                this.Width = formaFinala.Width;
+                valoareaRezolutieCurenta.Text = lungime + " x " + inaltime;
+                this.CenterToScreen();
+                calculareRatiiForma(formaInitiala, formaFinala);
+                modificareButoaneMeniuOptiuni();
+            }
+            if(culoareCurenta.BackColor!=culoareSelectata.BackColor)
+            {
+                Properties.Settings.Default.culoare=culoareSelectata.BackColor;
+                retinereCuloare.culoare=culoareSelectata.BackColor;
+                aplicareCuloare();
+                Properties.Settings.Default.Save();
+            }
         }
 
         protected override void butonMaximizare_Click(object sender, EventArgs e)
         {
             base.butonMaximizare_Click(sender, e);
             modificareButoaneMeniuOptiuni();
-        }
+        }  // ce face initial + ce va mai modifica in aceasta forma (fereastraOptiuni)
 
         protected void modificareButoaneMeniuOptiuni()
         {
@@ -169,6 +181,6 @@ namespace infoEducatie
             modificareElemente(lCuloareSelectata);
             modificareElemente(lRezolutie);
 
-        }
+        } // ce elemente vor fi modificate (marime)
     }
 }

@@ -149,6 +149,7 @@
             this.Name = "templateMeniuPrincipal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.templateMeniuPrincipal_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.templateMeniuPrincipal_KeyPress);
             this.ResumeLayout(false);
 
         }

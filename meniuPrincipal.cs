@@ -60,6 +60,11 @@ namespace infoEducatie
             aplicareCuloare(butonInvata);
             aplicareCuloare(butonOptiuni);
         }
+
+        private void meniuPrincipal_Load(object sender, EventArgs e)
+        {
+            aplicareCuloare();
+        }
     }
     public static class retinereFormaAnterioara
     {

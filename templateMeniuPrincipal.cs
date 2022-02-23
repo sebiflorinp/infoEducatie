@@ -26,7 +26,7 @@ namespace infoEducatie
             }
             else
             {
-                luareValoriRezolutii(retinereRezolutie.lungime, retinereRezolutie.inaltime,this.Width,this.Height);
+                luareValoriRezolutii(this.Width, this.Height,retinereRezolutie.lungime,retinereRezolutie.inaltime);
                 calculareRatiiForma();
             }
         }
@@ -66,25 +66,32 @@ namespace infoEducatie
             meniuAjutor.Show();
             Hide();
         } // deschide fereastra de ajutor
-        protected void luareValoriRezolutii(int lungimeNoua, int inaltimeNoua, int lungimeVeche, int inaltimeVeche)
+        protected void luareValoriRezolutii(int lungimeInitiala, int inaltimeInitiala, int lungimeDupa, int inaltimeDupa)
         {
-            formaInitiala.Width = lungimeVeche;
-            formaInitiala.Height = inaltimeVeche;
-            formaFinala.Width = lungimeNoua;
-            formaFinala.Height = inaltimeNoua;
+            formaInitiala.Width = lungimeInitiala;
+            formaInitiala.Height = inaltimeInitiala;
+            formaFinala.Width = lungimeDupa;
+            formaFinala.Height = inaltimeDupa;
         } // cu parametrii cand se trece de la o rezolutie la alta
 
         protected void calculareRatiiForma()
         {
             ratieLungimeX = (float)formaFinala.Width / formaInitiala.Width;
             ratieInaltimeY = (float)formaFinala.Height / formaInitiala.Height;
-        } // ok;
+        } // pt trecerea dintr-o forma in alta;
 
-        protected void calculareRatiiForma(Form formaInitiala,Form formaNoua)
+        protected void calculareRatiiForma(Rectangle formaInitiala,Rectangle formaDupa)
         {
-            ratieLungimeX = (float)formaInitiala.Width / formaNoua.Width;
-            ratieInaltimeY = (float)formaInitiala.Height / formaNoua.Height;
-        } // ok;
+            ratieLungimeX = (float)formaDupa.Width / formaInitiala.Width;
+            ratieInaltimeY = (float)formaDupa.Height / formaInitiala.Height;
+        } // pt conversii;
+
+        protected void calculareRatiiForma(Form formaInitiala, Form formaDupa)
+        {
+            ratieLungimeX = (float)formaDupa.Width / formaInitiala.Width;
+            ratieInaltimeY = (float)formaDupa.Height / formaInitiala.Height;
+        } // pt conversii;
+
 
         protected void modificareElemente(Control deModificat) // ok?
         {
@@ -128,10 +135,19 @@ namespace infoEducatie
             label.ForeColor = retinereCuloare.culoare;
         } // pt label-uri
 
-        protected virtual void templateMeniuPrincipal_Load(object sender, EventArgs e)
+        private void templateMeniuPrincipal_Load(object sender, EventArgs e)
         {
             retinereCuloare.culoare = Properties.Settings.Default.culoare;
             aplicareCuloare();
+        }
+
+        private void templateMeniuPrincipal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Escape)
+            {
+                if(this.WindowState == FormWindowState.Maximized)
+                    this.WindowState = FormWindowState.Normal;
+            }
         }
     }
     public static class retinereRezolutie
