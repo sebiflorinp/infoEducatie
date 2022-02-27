@@ -18,16 +18,21 @@ namespace infoEducatie
         public fereastraOptiuni()
         {
             InitializeComponent();
-            modificareButoaneMeniuOptiuni();
-            culoareCurenta.BackColor = retinereCuloare.culoare;
+            //modificareButoaneMeniuOptiuni();
+            //culoareCurenta.BackColor = retinereCuloare.culoare;
         }
 
         private void optiuniBack_Click(object sender, EventArgs e)
         {
             trecereForme(this, retinereFormaAnterioara.formaAnteriora);
             Close();
-            Application.Restart();
         } // merge in forma care a deschis aceasta forma
+
+        protected override void conversie()
+        {
+            base.conversie();
+            modificareButoaneMeniuOptiuni();
+        }
 
         protected override void aplicareCuloare()
         {
@@ -56,16 +61,20 @@ namespace infoEducatie
 
         private void fereastraOptiuni_Load(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                valoareaRezolutieCurenta.Text = "Fullscreen";
-            }
-            else
-            {
-                marimiForma.X = this.Size.Width;
-                marimiForma.Y = this.Size.Height;
-                valoareaRezolutieCurenta.Text = marimiForma.X + " x " + marimiForma.Y;
-            }
+            // if (this.WindowState == FormWindowState.Maximized)
+            // {
+            //     valoareaRezolutieCurenta.Text = "Fullscreen";
+            // }
+            // else
+            // {
+            //     marimiForma.X = this.Size.Width;
+            //     marimiForma.Y = this.Size.Height;
+            ////     valoareaRezolutieCurenta.Text = marimiForma.X + " x " + marimiForma.Y;
+            // }
+            this.Refresh();
+            valoareaRezolutieCurenta.Text = retinereRezolutii.lungimeUtilizator + " x " + retinereRezolutii.inaltimeUtilizator;
+            conversie();
+            aplicareCuloare();
         }
 
         private void butonAplica_Click(object sender, EventArgs e)
@@ -73,18 +82,21 @@ namespace infoEducatie
             if (valoareRezolutieSelectata.Text!="...")
             {
                 rezolutie = String.Copy(valoareRezolutieSelectata.Text);
-                var lungime = rezolutie.Substring(0, rezolutie.IndexOf(" "));
-                var inaltime = rezolutie.Substring(rezolutie.IndexOf(" ") + 3, rezolutie.IndexOf(" "));
-                formaFinala.Width = Int32.Parse(lungime);
-                formaFinala.Height = Int32.Parse(inaltime);
-                luareValoriRezolutii(formaInitiala.Width, formaInitiala.Height, formaFinala.Width, formaFinala.Height);
-                this.WindowState = FormWindowState.Normal;
-                this.Height = formaFinala.Height;
-                this.Width = formaFinala.Width;
-                valoareaRezolutieCurenta.Text = lungime + " x " + inaltime;
+                retinereRezolutii.lungimeUtilizator =Int32.Parse(rezolutie.Substring(0, rezolutie.IndexOf(" ")));
+                retinereRezolutii.inaltimeUtilizator = Int32.Parse(rezolutie.Substring(rezolutie.IndexOf(" ") + 3, rezolutie.IndexOf(" ")));
+                // var lungime = rezolutie.Substring(0, rezolutie.IndexOf(" "));
+                // var inaltime = rezolutie.Substring(rezolutie.IndexOf(" ") + 3, rezolutie.IndexOf(" "));
+                // formaFinala.Width = Int32.Parse(lungime);
+                // formaFinala.Height = Int32.Parse(inaltime);
+                // luareValoriRezolutii(formaInitiala.Width, formaInitiala.Height, formaFinala.Width, formaFinala.Height);
+                // this.WindowState = FormWindowState.Normal;
+                // this.Height = formaFinala.Height;
+                //   this.Width = formaFinala.Width;
+                valoareaRezolutieCurenta.Text = retinereRezolutii.lungimeUtilizator + " x " + retinereRezolutii.inaltimeUtilizator;
+                conversie();
                 this.CenterToScreen();
-                calculareRatiiForma(formaInitiala, formaFinala);
-                modificareButoaneMeniuOptiuni();
+                //calculareRatiiForma(formaInitiala, formaFinala);
+               // modificareButoaneMeniuOptiuni();
             }
             if(culoareCurenta.BackColor!=culoareSelectata.BackColor)
             {

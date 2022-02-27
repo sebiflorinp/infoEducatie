@@ -70,5 +70,53 @@ namespace infoEducatie.Properties {
                 this["culoare"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("450")]
+        public int inaltimeOriginala {
+            get {
+                return ((int)(this["inaltimeOriginala"]));
+            }
+            set {
+                this["inaltimeOriginala"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("800")]
+        public int lungimeOriginala {
+            get {
+                return ((int)(this["lungimeOriginala"]));
+            }
+            set {
+                this["lungimeOriginala"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("450")]
+        public int inaltimeUtilizator {
+            get {
+                return ((int)(this["inaltimeUtilizator"]));
+            }
+            set {
+                this["inaltimeUtilizator"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("800")]
+        public int lungimeUtilizator {
+            get {
+                return ((int)(this["lungimeUtilizator"]));
+            }
+            set {
+                this["lungimeUtilizator"] = value;
+            }
+        }
     }
 }

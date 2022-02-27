@@ -12,12 +12,14 @@ namespace infoEducatie
 {
     public partial class meniuPrincipal : templateMeniuPrincipal
     {
+        List<Control> controale = new List<Control>();
+        List<Size> marimi = new List<Size>();
         public meniuPrincipal()
         {
             InitializeComponent();
-            this.Width = retinereRezolutie.lungime;
-            this.Height = retinereRezolutie.inaltime;
-            modificareButoaneMeniuPrincipal();
+            //this.Width = retinereRezolutie.lungime;
+            //this.Height = retinereRezolutie.inaltime;
+            //modificareButoaneMeniuPrincipal();
         }
 
         private void butonIesire_Click(object sender, EventArgs e)
@@ -38,6 +40,17 @@ namespace infoEducatie
             modificareElemente(butonOptiuni);
             modificareElemente(butonExerseaza);
             modificareElemente(butonInvata);
+        }
+        protected void elementeMeniuPrincipal()
+        {
+            controale.Add(butonIesire);
+            marimi.Add(butonIesire.Size);
+            controale.Add(butonOptiuni);
+            marimi.Add(butonOptiuni.Size);
+            controale.Add(butonExerseaza);
+            marimi.Add(butonExerseaza.Size);
+            controale.Add(butonIesire);
+            marimi.Add(butonIesire.Size);
         }
 
         private void butonOptiuni_Click(object sender, EventArgs e)
@@ -61,9 +74,17 @@ namespace infoEducatie
             aplicareCuloare(butonOptiuni);
         }
 
+        protected override void conversie()
+        {
+            base.conversie();
+            modificareButoaneMeniuPrincipal();
+        }
+
         private void meniuPrincipal_Load(object sender, EventArgs e)
         {
+            retinereRezolutii.formaActuala = this;
             aplicareCuloare();
+            conversie();
         }
     }
     public static class retinereFormaAnterioara

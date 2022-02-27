@@ -15,20 +15,36 @@ namespace infoEducatie
         protected Rectangle formaFinala;
         protected Rectangle controlDeModificatInitial;
         protected Rectangle controlDeModificatFinal;
+
         public templateMeniuPrincipal()
         {
             InitializeComponent();
-            retinereRezolutie.lungime = Properties.Settings.Default.lungime;
-            retinereRezolutie.inaltime = Properties.Settings.Default.inaltime;
+            //retinereRezolutie.lungime = Properties.Settings.Default.lungime;
+           // retinereRezolutie.inaltime = Properties.Settings.Default.inaltime;
+            retinereRezolutii.inaltimeUtilizator = Properties.Settings.Default.inaltimeUtilizator;
+            retinereRezolutii.lungimeUtilizator = Properties.Settings.Default.lungimeUtilizator;
             if (Properties.Settings.Default.maximizat == 1)
             {
                 maximizare();
             }
             else
             {
-                luareValoriRezolutii(this.Width, this.Height,retinereRezolutie.lungime,retinereRezolutie.inaltime);
-                calculareRatiiForma();
+                //luareValoriRezolutii(this.Width, this.Height,retinereRezolutie.lungime,retinereRezolutie.inaltime);
+               // calculareRatiiForma();
             }
+        }
+
+        protected virtual void conversie()
+        {
+            calculareRatii();
+            this.Height=retinereRezolutii.inaltimeUtilizator;
+            this.Width=retinereRezolutii.lungimeUtilizator;
+        } // + ce elemente trebuie modificate
+
+        protected void calculareRatii()
+        {
+            ratieLungimeX = (float)retinereRezolutii.lungimeUtilizator / Properties.Settings.Default.lungimeOriginala;
+            ratieInaltimeY = (float)retinereRezolutii.inaltimeUtilizator/Properties.Settings.Default.inaltimeOriginala;
         }
 
         private void butonX_Click(object sender, EventArgs e)
@@ -96,13 +112,14 @@ namespace infoEducatie
         protected void modificareElemente(Control deModificat) // ok?
         {
             controlDeModificatInitial.Width = deModificat.Size.Width;
-            controlDeModificatInitial.Height = deModificat.Size.Height;
+             controlDeModificatInitial.Height = deModificat.Size.Height;
             controlDeModificatInitial.X = deModificat.Location.X;
             controlDeModificatInitial.Y = deModificat.Location.Y;
-            controlDeModificatFinal.Width = (int)(controlDeModificatInitial.Width * ratieLungimeX);
-            controlDeModificatFinal.Height = (int)(controlDeModificatInitial.Height * ratieInaltimeY);
-            controlDeModificatFinal.X = (int)(controlDeModificatInitial.X * ratieLungimeX);
-            controlDeModificatFinal.Y = (int)(controlDeModificatInitial.Y * ratieInaltimeY);
+             controlDeModificatFinal.Width = (int)(controlDeModificatInitial.Width * ratieLungimeX);
+             controlDeModificatFinal.Height = (int)(controlDeModificatInitial.Height * ratieInaltimeY);
+             controlDeModificatFinal.X = (int)(controlDeModificatInitial.X * ratieLungimeX);
+             controlDeModificatFinal.Y = (int)(controlDeModificatInitial.Y * ratieInaltimeY);
+
             deModificat.Size = new Size(controlDeModificatFinal.Width, controlDeModificatFinal.Height);
             deModificat.Location = new Point(controlDeModificatFinal.X, controlDeModificatFinal.Y);
         }
@@ -138,7 +155,6 @@ namespace infoEducatie
         private void templateMeniuPrincipal_Load(object sender, EventArgs e)
         {
             retinereCuloare.culoare = Properties.Settings.Default.culoare;
-            aplicareCuloare();
         }
 
         private void templateMeniuPrincipal_KeyPress(object sender, KeyPressEventArgs e)
@@ -162,5 +178,12 @@ namespace infoEducatie
     public static class retinereCuloare
     {
         public static Color culoare;
-    }
+    } // de combinat
+
+    public static class retinereRezolutii
+    {
+        public static int lungimeUtilizator;
+        public static int inaltimeUtilizator;
+        public static Form formaActuala;
+    } // de combinat
 }
